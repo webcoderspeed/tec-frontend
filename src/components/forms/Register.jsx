@@ -46,12 +46,8 @@ const Register = () => {
   };
 
   return (
-    <div className='flex'>
+    <div className='flex py-12'>
       <div className="p-6 mx-auto w-full lg:w-1/2">
-
-        <div className="flex  justify-center">
-          <img src={logo} alt="tribe logo" className="h-28" />
-        </div>
 
         <div className='md:mx-16'>
           <h3 className="font-bold text-black text-4xl my-6">Sign Up</h3>
