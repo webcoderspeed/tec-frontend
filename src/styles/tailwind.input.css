@@ -1,3 +1,100 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@font-face {
+  font-family: 'HemiCube';
+  src: url('../fonts/HemicubeLogoPersonalUseOnly-z8jw4.ttf');
+}
+
+body {
+  font-family: Avenir-Roman, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+  background-color: #040714 !important;
+}
+
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+
+.hemi-cube {
+  font-family: 'HemiCube', 'sans-serif';
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-img-hover:hover img {
+  transform: scale(1.2);
+}
+
+
+.card-img-hover img {
+  transition: all 0.5s ease-in-out;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.fullpage {
+  height: 78vh
+}
+
+.fullpage-title {
+  width: 40rem;
+  word-spacing: 0.5rem;
+}
+
+@media screen and (max-width:700px) {
+  .fullpage-title {
+    width: 100%;
+    word-spacing: 0.3rem;
+  }
+}
+
+@media screen and (min-width:920px) {
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 15rem repeat(2, 1fr);
+    grid-template-rows: 10vh 1fr;
+  }
+}
+
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+.ck-editor__editable {
+  min-height: 500px;
+}
+
+h1 {
+  font-size: 36px;
+}

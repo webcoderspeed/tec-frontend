@@ -2,6 +2,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import * as userReducer from './reducers/user.reducers';
+import { postReducer } from './reducers/post.reducers';
 
 const reducer = combineReducers({
   userLogin: userReducer.userLoginReducer,
@@ -18,6 +19,8 @@ const reducer = combineReducers({
   userloginWithSocial: userReducer.userLoginWithSocialReducer,
   userForgotPassword: userReducer.forgotPasswordReducer,
   userResetPassword: userReducer.resetPasswordReducer,
+
+  posts: postReducer,
 
 })
 

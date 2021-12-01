@@ -48,12 +48,8 @@ const Login = () => {
   };
 
   return (
-    <div className='flex'>
+    <div className='flex py-12'>
       <div className='p-6 mx-auto w-full lg:w-1/2'>
-        <div className='flex justify-center'>
-          <img src={logo} alt='tec logo' className='h-28' />
-        </div>
-
         <div className='md:mx-16'>
           <h3 className='font-bold text-black text-4xl my-6'>Sign In</h3>
           <Form name="Register Form" onFinish={onSubmit}>
@@ -95,7 +91,7 @@ const Login = () => {
                 htmlType="submit"
                 block
                 size="large"
-                className="uppercase font-bold"
+                className="uppercase font-bold text-black bg-yellow-400 rounded-md outline-none border-0 hover:bg-yellow-500"
               >
                 Sign In
               </Button>

@@ -41,7 +41,7 @@ export const logout = () => async (dispatch) => {
   dispatch({ type: userConstants.USER_LOGOUT })
   dispatch({ type: userConstants.USER_DETAILS_RESET })
   dispatch({ type: userConstants.USER_LIST_RESET })
-  axios.get('/api/socialAuth/logout');
+  axios.post('/api/socialAuth/logout');
   document.location.href = '/login'
 };
 
@@ -337,17 +337,8 @@ export const loginWithSocials = () => async (dispatch) => {
       type: userConstants.USER_LOGIN_WITH_SOCIAL_REQUEST,
     })
 
-    const config = {
-      headers: {
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Credentials": true
-        }
-      }
-    };
+    const { data } = await axios.get('api/socialAuth/login/success');
 
-    const { data } = await axios.get('api/socialAuth/login/success', config);
     dispatch({
       type: userConstants.USER_LOGIN_WITH_SOCIAL_SUCCESS,
       payload: data.user

@@ -37,7 +37,6 @@ const ForgotPassword = () => {
       <div className="font-sans antialiased text-gray-600 min-h-full flex flex-col relative p-6 mx-auto w-full lg:w-1/2">
         <main className="relative z-10 flex-auto flex items-center justify-center text-sm text-center text-gray-600 py-16 px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-sm">
-            <img src={logo} alt='tribe' />
             {
               loading ? (
                 <div className='flex justify-center items-center'>
